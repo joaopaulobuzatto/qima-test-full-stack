@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory = br.com.\
+    joaopaulobuzatto.qimatestfullstack.config.\
+    SqlTestContainersSpringContextCustomizerFactory
