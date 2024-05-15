@@ -1,6 +1,50 @@
-# qimaTestFullStack
+# QIMA Test Full Stack
 
-This application was generated using JHipster 8.4.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.4.0](https://www.jhipster.tech/documentation-archive/v8.4.0).
+Project created to solve the requirements below:
+
+![alt text](readme-requirements.png)
+
+## Technologies
+
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+- [Spring Web MVC](https://docs.spring.io/spring-framework/reference/web/webmvc.html)
+- [Spring Security](https://spring.io/projects/spring-security)
+- [JWT authentication](https://jwt.io/)
+- [Maven](https://maven.apache.org/)
+- [Liquibase](https://www.liquibase.com/)
+- [H2 - development database](https://www.h2database.com/html/main.html)
+- [PostgreSQL - production database](https://www.postgresql.org/)
+- [Swagger](https://swagger.io/)
+
+## Architecture
+
+- Monolithic application
+
+## Pages
+
+### List Products
+
+![alt text](readme-page-list-product.png)
+
+### Create or edit a Product
+
+![alt text](readme-page-form-product.png)
+
+### Delete a Product
+
+![alt text](readme-page-delete-product.png)
+
+### API documentation
+
+![alt text](readme-page-api-documentatio.png)
+
+### User Admin
+
+- Administrator (login="admin" and password="admin")
+- User (login="user" and password="user")
+
+![alt text](readme-menu-admin.png)
 
 ## Project Structure
 
@@ -50,65 +94,6 @@ Add the `help` flag on any command to see how you can use it. For example, `npm 
 
 The `npm run` command will list all of the scripts available to run for this project.
 
-### PWA Support
-
-JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
-
-The service worker initialization code is disabled by default. To enable it, uncomment the following code in `src/main/webapp/app/app.config.ts`:
-
-```typescript
-ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
-```
-
-### Managing dependencies
-
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-```
-npm install --save --save-exact leaflet
-```
-
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-```
-npm install --save-dev --save-exact @types/leaflet
-```
-
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Edit [src/main/webapp/app/app.config.ts](src/main/webapp/app/app.config.ts) file:
-
-```
-import 'leaflet/dist/leaflet.js';
-```
-
-Edit [src/main/webapp/content/scss/vendor.scss](src/main/webapp/content/scss/vendor.scss) file:
-
-```
-@import 'leaflet/dist/leaflet.css';
-```
-
-Note: There are still a few other things remaining to do for Leaflet that we won't detail here.
-
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
-### Using Angular CLI
-
-You can also use [Angular CLI][] to generate some custom client code.
-
-For example, the following command:
-
-```
-ng generate component my-component
-```
-
-will generate few files:
-
-```
-create src/main/webapp/app/my-component/my-component.component.html
-create src/main/webapp/app/my-component/my-component.component.ts
-update src/main/webapp/app/app.config.ts
-```
-
 ## Building for production
 
 ### Packaging as jar
@@ -136,14 +121,6 @@ To package your application as a war in order to deploy it to an application ser
 
 ```
 ./mvnw -Pprod,war clean verify
-```
-
-### JHipster Control Center
-
-JHipster Control Center can help you manage and control your application(s). You can start a local control center server (accessible on http://localhost:7419) with:
-
-```
-docker compose -f src/main/docker/jhipster-control-center.yml up
 ```
 
 ## Testing
@@ -237,10 +214,6 @@ docker compose -f src/main/docker/app.yml up -d
 When running Docker Desktop on MacOS Big Sur or later, consider enabling experimental `Use the new Virtualization framework` for better processing performance ([disk access performance is worse](https://github.com/docker/roadmap/issues/7)).
 
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
-
-## Continuous Integration (optional)
-
-To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
 [JHipster Homepage and latest documentation]: https://www.jhipster.tech
 [JHipster 8.4.0 archive]: https://www.jhipster.tech/documentation-archive/v8.4.0
